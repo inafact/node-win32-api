@@ -83,6 +83,11 @@ export interface Win32Fns {
   UnhookWinEvent(hWinEventHook: M.HWINEVENTHOOK): M.BOOL
 
   UpdateWindow(hWnd: M.HWND): M.BOOL
+
+  SetForegroundWindow(hWnd: M.HWND): M.BOOL
+
+  GetDesktopWindow(): M.HWND
+
 }
 
 
@@ -143,6 +148,10 @@ export const apiDef: FModel.DllFuncs = {
   UnhookWinEvent: [W.BOOL, [W.HWINEVENTHOOK] ],
 
   UpdateWindow: [W.BOOL, [W.HWND] ],
+
+  SetForegroundWindow: [W.BOOL, [W.HWND] ],
+
+  GetDesktopWindow: [W.HWND, [] ],
 }
 /* istanbul ignore next */
 if (process.arch === 'x64') {
