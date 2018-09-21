@@ -1,5 +1,5 @@
 {
-  "name": "win32-api",
+  "name": "@inafact/win32-api",
   "author": "waiting",
   "version": "3.6.0",
   "description": "FFI definitions of windows win32 api for node-ffi",
@@ -111,5 +111,8 @@
   },
   "os": [
     "win32"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  }
 }
